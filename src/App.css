@@ -1,0 +1,27 @@
+body {
+  background-color: #121212;
+  color: #fff; /* Optional: for better contrast with the dark bg */
+  margin: 0;
+  padding: 0;
+  font-family: 'General Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #333;
+}
+
+.main-container {
+  flex: 1;
+  padding: 32px;
+  /* background: transparent; keep your universal bg */
+  overflow-y: auto;
+}

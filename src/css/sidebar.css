@@ -1,0 +1,105 @@
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    background: #181818;
+    color: #bdbdbd;
+    display: flex;
+    flex-direction: column;
+ 
+  }
+  
+  .profile-section {
+    display: flex;
+    margin-left: 16px;
+    align-items: center;
+    padding: 24px 0 12px 0;
+    gap: 12px;
+  }
+  
+  .profile-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .profile-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+  
+  .profile-title {
+    font-size: 0.95rem;
+    color: #bdbdbd;
+    font-weight: 400;
+  }
+  
+  .sidebar-divider {
+    border: none;
+    border-top: 1px dashed #333;
+    width: 85%;              /* Make the line shorter */
+    margin: 8px auto; 
+  }
+  
+  .sidebar-menu {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 32px;
+    margin-bottom: 315px;
+  }
+  
+  .sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #888888;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 8px 0;
+    transition: color 0.2s;
+  }
+  
+  .sidebar-menu a:hover {
+    color: #F6F6F6;
+  }
+
+  .sidebar-menu a.selected {
+    color: #F6F6F6;
+  }
+  
+  .sidebar-bottom {
+    padding-left: 32px;
+  }
+  
+  .follow-me {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #bdbdbd;
+  }
+  
+  .sidebar-socials {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  
+  .sidebar-socials a {
+    color: #bdbdbd;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+  }
+  
+  .sidebar-socials a:hover {
+    color: #fff;
+  }
