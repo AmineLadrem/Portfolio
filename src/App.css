@@ -1,6 +1,6 @@
 body {
   background-color: #121212;
-  color: #fff; /* Optional: for better contrast with the dark bg */
+  color: #fff;
   margin: 0;
   padding: 0;
   font-family: 'General Sans', sans-serif;
@@ -20,8 +20,4 @@ body {
 }
 
 .main-container {
-  flex: 1;
-  padding: 32px;
-  /* background: transparent; keep your universal bg */
-  overflow-y: auto;
 }

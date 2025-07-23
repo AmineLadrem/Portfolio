@@ -1,0 +1,96 @@
+.hero {
+  width: 100%;
+  max-width: none; 
+  margin: 48px auto 0 auto;
+  color: #fff;
+  padding: 64px 48px 48px 48px;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 48px auto 0 auto;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #232323;
+  border-radius: 8px;
+  padding: 6px 18px;
+  width: fit-content;
+  margin-bottom: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1ecb4f;
+  margin-right: 10px;
+  box-shadow: 0 0 6px #1ecb4f99;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 18px 0;
+}
+
+.hero-subtitle {
+  color: #bdbdbd;
+  font-size: 1.15rem;
+  margin-bottom: 36px;
+  margin-top: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.hero-btn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  background: #1A1A1A;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-btn.primary {
+  background: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #181818;
+}
+
+.hero-btn.primary:hover {
+  background: #121212;
+}
+
+/* same thing when I click on it */ 
+.hero-btn.primary:active {
+  background: #121212;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.hero-btn:hover {
+  background: #121212;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+} 
+
+.hero-separator {
+  border: none;
+  border-top: 2px dashed #333;
+  width: 90%;
+  margin: 40px auto 0 auto;
+  opacity: 0.7;
+} 
