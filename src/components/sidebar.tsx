@@ -4,7 +4,17 @@ import profileImg from '../assets/profile.jpg';
 import { FaUser, FaBriefcase, FaDesktop, FaBlog, FaEnvelope, FaXTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa6';
 import { FaHome, FaShoppingCart } from 'react-icons/fa';
 
-const Sidebar = () => (
+const menuItems = [
+  { key: 'home', label: 'Home', icon: <FaHome /> },
+  { key: 'about', label: 'About', icon: <FaUser /> },
+  { key: 'services', label: 'Services', icon: <FaBriefcase /> },
+  { key: 'projects', label: 'Projects', icon: <FaDesktop /> },
+  { key: 'shop', label: 'Shop', icon: <FaShoppingCart /> },
+  { key: 'blog', label: 'Blog', icon: <FaBlog /> },
+  { key: 'contact', label: 'Contact', icon: <FaEnvelope /> },
+];
+
+const Sidebar = ({ selected, onSelect }: { selected: string, onSelect: (key: string) => void }) => (
   <aside className="sidebar">
     <div className="profile-section">
       <img src={profileImg} alt="Profile" className="profile-img" />
@@ -15,13 +25,19 @@ const Sidebar = () => (
     </div>
     <hr className="sidebar-divider" />
     <nav className="sidebar-menu">
-      <a href="#"><FaHome /> Home</a>
-      <a href="#"><FaUser /> About</a>
-      <a href="#"><FaBriefcase /> Services</a>
-      <a href="#"><FaDesktop /> Projects</a>
-      <a href="#"><FaShoppingCart /> Shop</a>
-      <a href="#"><FaBlog /> Blog</a>
-      <a href="#"><FaEnvelope /> Contact</a>
+      {menuItems.map(item => (
+        <a
+          key={item.key}
+          href="#"
+          className={selected === item.key ? 'selected' : ''}
+          onClick={e => {
+            e.preventDefault();
+            onSelect(item.key);
+          }}
+        >
+          {item.icon} {item.label}
+        </a>
+      ))}
     </nav>
     <hr className="sidebar-divider" />
     <div className="sidebar-bottom">
