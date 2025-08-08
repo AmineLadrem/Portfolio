@@ -1,0 +1,55 @@
+/* Contact page uses global tokens from App.css */
+
+.contact { max-width: var(--content-max); margin: 0 auto; }
+.contact-header { margin-bottom: 8px; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.contact-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 14px 16px 14px;
+}
+
+.contact-card-title { margin: 0 0 10px 0; font-size: 1.05rem; }
+
+.contact-form { display: grid; gap: 12px; }
+.field { display: grid; gap: 8px; }
+.label { color: var(--muted); font-size: 0.92rem; }
+
+.input, .textarea, .select {
+  width: 100%;
+  background: #141414;
+  color: var(--text);
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: #141414;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  width: fit-content;
+  margin-bottom: 6px;
+}
+
+.socials { display: flex; flex-direction: column; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); padding: 6px 8px; border-radius: 8px; color: var(--text); text-decoration: none; width: fit-content; }
+
+@media (max-width: 980px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+

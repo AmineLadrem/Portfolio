@@ -15,7 +15,7 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
       </p>
       <div className="hero-actions">
         <button className="hero-btn primary" onClick={() => onSelect('contact')}>Get In Touch</button>
-        <button className="hero-btn">About Me</button>
+        <button className="hero-btn" onClick={() => onSelect('about')}>About Me</button>
       </div>
     </section>
     <hr className="hero-separator" />
