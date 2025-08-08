@@ -1,5 +1,5 @@
 import React, { FormEvent } from 'react';
-import { FiMail, FiTwitter, FiLinkedin, FiInstagram } from 'react-icons/fi';
+import { FiMail, FiTwitter, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const Contact: React.FC = () => {
   const handleSubmit = (e: FormEvent) => {
@@ -56,8 +56,8 @@ const Contact: React.FC = () => {
           <div className="contact-card">
             <h4 className="contact-card-title">Follow Me</h4>
             <div className="socials">
-              <a className="chip" href="#"><FiTwitter /> Twitter/X</a>
-              <a className="chip" href="#"><FiLinkedin /> LinkedIn</a>
+              <a className="chip" href="https://github.com/AmineLadrem"><FiGithub /> Github</a>
+              <a className="chip" href="https://www.linkedin.com/in/abd-ul-haq-amine-ladrem/"><FiLinkedin /> LinkedIn</a>
               <a className="chip" href="#"><FiInstagram /> Instagram</a>
             </div>
           </div>

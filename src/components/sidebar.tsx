@@ -1,7 +1,7 @@
 import '../css/sidebar.css';
 import '../App.css';
 import profileImg from '../assets/profile.jpg';
-import { FiUser, FiBriefcase, FiMonitor, FiBookOpen, FiMail, FiHome, FiShoppingCart, FiTwitter, FiLinkedin, FiInstagram } from 'react-icons/fi';
+import { FiUser, FiBriefcase, FiMonitor, FiBookOpen, FiMail, FiHome, FiShoppingCart, FiTwitter, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const menuItems = [
   { key: 'home', label: 'Home', icon: <FiHome /> },
@@ -41,8 +41,8 @@ const Sidebar = ({ selected, onSelect }: { selected: string, onSelect: (key: str
     <hr className="sidebar-divider" />
     <div className="sidebar-bottom">
       <div className="sidebar-socials">
-        <a href="#"><FiTwitter /></a>
-        <a href="#"><FiLinkedin /></a>
+        <a href="https://github.com/AmineLadrem"><FiGithub /></a>
+        <a href="https://www.linkedin.com/in/abd-ul-haq-amine-ladrem/"><FiLinkedin /></a>
         <a href="#"><FiInstagram /></a>
       </div>
     </div>
