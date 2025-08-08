@@ -1,6 +1,7 @@
 import Sidebar from './components/sidebar';
 import './App.css';
 import './css/hero.css';
+import './css/about.css';
 import { useState } from 'react';
 import Home from './components/home';
 import About from './components/about';
@@ -20,7 +21,7 @@ function App() {
       Content = <Home onSelect={setSelected} />;
       break;
     case 'about':
-      Content = <About />;
+      Content = <About onSelect={setSelected} />;
       break;
     case 'services':
       Content = <Services />;

@@ -1,14 +1,41 @@
+/* ---- Tokens & Resets (Universal) ---- */
+:root {
+  --bg: #121212;
+  --text: #ffffff;
+  --muted: #bdbdbd;
+  --border: #333333;
+  --panel: #161616;
+
+  --content-max: 1180px;
+
+  --gutter-xs: 16px;
+  --gutter-sm: 50x;
+  --gutter-md: 40px;
+  --gutter-lg: 200px;
+
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  background-color: #121212;
-  color: #fff;
+  background-color: var(--bg);
+  color: var(--text);
   margin: 0;
   padding: 0;
   font-family: 'General Sans', sans-serif;
   min-height: 100vh;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
+/* ---- App Layout ---- */
 .app-layout {
   display: flex;
+  height: 100vh;
+  overflow: hidden; /* prevent body scrolling; only main container will scroll */
 }
 
 .sidebar {
@@ -16,15 +43,65 @@ body {
   min-width: 240px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #333;
+  border-right: 1px solid var(--border);
+  height: 100vh; /* keep sidebar fixed height */
 }
 
 .main-container {
-  width: 100%;
-  padding-left: 190px;
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto; /* only main content scrolls */
+  box-sizing: border-box;
+  padding-left: var(--gutter-sm);
+  padding-right: var(--gutter-sm);
+  padding-top: 80px;
+  
 }
 
-/* Fade-in animation for route/content changes */
+@media (min-width: 768px) {
+  .main-container { padding-inline: var(--gutter-md); }
+}
+
+@media (min-width: 1200px) {
+  .main-container { padding-inline: var(--gutter-lg); }
+}
+
+/* Shared constrained section (no markup change required) */
+.hero,
+.about-container {
+  max-width: var(--content-max);
+}
+
+/* ---- Primitives ---- */
+.btn,
+.hero-btn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: #1A1A1A;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn:hover,
+.hero-btn:hover { background: #121212; }
+
+.btn.primary,
+.hero-btn.primary { background: #ffffff; color: #181818; }
+
+.divider,
+.hero-separator {
+  border: none;
+  border-top: 2px dashed var(--border);
+  width: 100%;
+  margin: 40px auto 0 auto;
+  opacity: 0.7;
+}
+
+/* Fade-in animation for route/content chan300 */
 .fade-in {
   animation: fadeIn 600ms ease-in-out;
 }
@@ -40,6 +117,7 @@ body {
   }
 }
 
+/* ---- Animations ---- */
 /* General page-level stagger for direct children */
 .page-animate > * {
   opacity: 0;
@@ -56,7 +134,6 @@ body {
 .page-animate > *:nth-child(7) { animation-delay: 660ms; }
 .page-animate > *:nth-child(8) { animation-delay: 760ms; }
 
-/* Avoid double-animating nested hero internals; hero handles its own stagger */
 .page-animate .hero * {
   animation: none !important;
   opacity: unset;
