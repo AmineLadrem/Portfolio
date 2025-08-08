@@ -1,17 +1,16 @@
 import '../css/sidebar.css';
 import '../App.css';
 import profileImg from '../assets/profile.jpg';
-import { FaUser, FaBriefcase, FaDesktop, FaBlog, FaEnvelope, FaXTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa6';
-import { FaHome, FaShoppingCart } from 'react-icons/fa';
+import { FiUser, FiBriefcase, FiMonitor, FiBookOpen, FiMail, FiHome, FiShoppingCart, FiTwitter, FiLinkedin, FiInstagram } from 'react-icons/fi';
 
 const menuItems = [
-  { key: 'home', label: 'Home', icon: <FaHome /> },
-  { key: 'about', label: 'About', icon: <FaUser /> },
-  { key: 'services', label: 'Services', icon: <FaBriefcase /> },
-  { key: 'projects', label: 'Projects', icon: <FaDesktop /> },
-  { key: 'shop', label: 'Shop', icon: <FaShoppingCart /> },
-  { key: 'blog', label: 'Blog', icon: <FaBlog /> },
-  { key: 'contact', label: 'Contact', icon: <FaEnvelope /> },
+  { key: 'home', label: 'Home', icon: <FiHome /> },
+  { key: 'about', label: 'About', icon: <FiUser /> },
+  { key: 'services', label: 'Services', icon: <FiBriefcase /> },
+  { key: 'projects', label: 'Projects', icon: <FiMonitor /> },
+  { key: 'shop', label: 'Shop', icon: <FiShoppingCart /> },
+  { key: 'blog', label: 'Blog', icon: <FiBookOpen /> },
+  { key: 'contact', label: 'Contact', icon: <FiMail /> },
 ];
 
 const Sidebar = ({ selected, onSelect }: { selected: string, onSelect: (key: string) => void }) => (
@@ -42,9 +41,9 @@ const Sidebar = ({ selected, onSelect }: { selected: string, onSelect: (key: str
     <hr className="sidebar-divider" />
     <div className="sidebar-bottom">
       <div className="sidebar-socials">
-        <a href="#"><FaXTwitter /></a>
-        <a href="#"><FaLinkedin /></a>
-        <a href="#"><FaInstagram /></a>
+        <a href="#"><FiTwitter /></a>
+        <a href="#"><FiLinkedin /></a>
+        <a href="#"><FiInstagram /></a>
       </div>
     </div>
   </aside>

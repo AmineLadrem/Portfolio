@@ -1,7 +1,7 @@
 import Sidebar from './components/sidebar';
 import './App.css';
 import './css/hero.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Home from './components/home';
 import About from './components/about';
 import Services from './components/services';

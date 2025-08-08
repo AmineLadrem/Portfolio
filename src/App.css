@@ -20,4 +20,45 @@ body {
 }
 
 .main-container {
+  width: 100%;
+  padding-left: 190px;
+}
+
+/* Fade-in animation for route/content changes */
+.fade-in {
+  animation: fadeIn 600ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General page-level stagger for direct children */
+.page-animate > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 600ms ease-out forwards;
+}
+
+.page-animate > *:nth-child(1) { animation-delay: 60ms; }
+.page-animate > *:nth-child(2) { animation-delay: 160ms; }
+.page-animate > *:nth-child(3) { animation-delay: 260ms; }
+.page-animate > *:nth-child(4) { animation-delay: 360ms; }
+.page-animate > *:nth-child(5) { animation-delay: 460ms; }
+.page-animate > *:nth-child(6) { animation-delay: 560ms; }
+.page-animate > *:nth-child(7) { animation-delay: 660ms; }
+.page-animate > *:nth-child(8) { animation-delay: 760ms; }
+
+/* Avoid double-animating nested hero internals; hero handles its own stagger */
+.page-animate .hero * {
+  animation: none !important;
+  opacity: unset;
+  transform: unset;
 }

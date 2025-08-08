@@ -1,7 +1,7 @@
 .sidebar {
     width: 240px;
     min-width: 240px;
-    background: #181818;
+    background: #121212;
     color: #bdbdbd;
     display: flex;
     flex-direction: column;
@@ -66,6 +66,7 @@
     text-decoration: none;
     margin-bottom: 10px;
     font-size: 1rem;
+    font-weight: 400; /* slightly thinner text */
     padding: 8px 0;
     transition: color 0.2s;
   }
