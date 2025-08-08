@@ -17,6 +17,14 @@
   padding: 14px 14px 16px 14px;
 }
 
+/* Remove boxes on the right column; keep only content on page background */
+.contact-aside .contact-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
 .contact-card-title { margin: 0 0 10px 0; font-size: 1.05rem; }
 
 .contact-form { display: grid; gap: 12px; }
