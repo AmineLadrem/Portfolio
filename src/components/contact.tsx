@@ -41,17 +41,6 @@ const Contact: React.FC = () => {
               <textarea className="textarea" rows={6} placeholder="Web design..."></textarea>
             </label>
 
-            <label className="field">
-              <span className="label">Project timeline</span>
-              <select className="select">
-                <option value="" hidden>Select timeline...</option>
-                <option>As soon as possible</option>
-                <option>1-3 months</option>
-                <option>3-6 months</option>
-                <option>Flexible</option>
-              </select>
-            </label>
-
             <button className="btn primary" type="submit">Send Inquiry</button>
           </form>
         </div>

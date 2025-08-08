@@ -54,7 +54,7 @@ html, body, #root {
   box-sizing: border-box;
   padding-left: var(--gutter-sm);
   padding-right: var(--gutter-sm);
-  padding-top: 20px;
+  padding-top: 100px;
   
 }
 
