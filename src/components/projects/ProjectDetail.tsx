@@ -16,6 +16,8 @@ type ProjectDetailProps = {
   category: string;
   tool: string;
   heroImage?: string;
+  repoUrl?: string;
+  screenshots?: string[];
   related?: RelatedProject[];
   onBackToAll: () => void;
   onOpenProject: (key: string) => void;
@@ -29,16 +31,28 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   category,
   tool,
   heroImage,
+  repoUrl,
+  screenshots = [],
   related = [],
   onBackToAll,
   onOpenProject,
 }) => {
   return (
     <section className="project-detail page-animate">
-      <button className="hero-btn back-btn" onClick={onBackToAll} aria-label="Back to all projects">
+      <div className="detail-top">
+        <button className="hero-btn back-btn" onClick={onBackToAll} aria-label="Back to all projects">
         <FiArrowLeft /> All projects
-      </button>
-      <h1 className="services-heading" style={{ marginTop: 12 }}>{title}</h1>
+        </button>
+      </div>
+      <div className="detail-title-row">
+        <h1 className="services-heading" style={{ margin: 0 }}>{title}</h1>
+        {repoUrl && (
+          <a className="hero-btn repo-btn" href={repoUrl} target="_blank" rel="noreferrer">
+            View Repo
+          </a>
+        )}
+      </div>
+      <div style={{ height: 8 }} />
       <p className="project-detail-desc">{description}</p>
 
       <div className="project-info-panel">
@@ -63,6 +77,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
       {heroImage && (
         <div className="project-hero-image">
           <img src={heroImage} alt={`${title} hero`} />
+        </div>
+      )}
+
+      {screenshots.length > 0 && (
+        <div className="screenshot-grid">
+          {screenshots.map((src, idx) => (
+            <div key={idx} className="screenshot-item">
+              <img src={src} alt={`${title} screenshot ${idx + 1}`} />
+            </div>
+          ))}
         </div>
       )}
 

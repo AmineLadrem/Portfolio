@@ -9,11 +9,13 @@ const Containers: React.FC<{ onBackToAll: () => void; onOpenProject: (key: strin
     <ProjectDetail
       title="Tracking Containers"
       description="End-to-end system for tracking shipping containers in real time with dashboards and alerts."
-      year="2024"
+      year="2023"
       service="Web Dev"
       category="IoT / Dashboard"
-      tool="React"
+      tool="Flutter / Laravel / Firebase / MySQL"
       heroImage={portImg}
+      repoUrl="https://github.com/youruser/containers"
+      screenshots={[portImg]}
       related={[
         { key: 'lotus', title: 'Lotus', tag: 'Framer Template', imageSrc: lotusImg },
         { key: 'srs', title: 'Smart Room Service', tag: 'Landing Page', imageSrc: logoImg },

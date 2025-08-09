@@ -13,6 +13,8 @@ const Inotel: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) =
     category="SaaS Dashboard"
     tool="React, Node.js"
     heroImage={logoImg}
+    repoUrl="https://github.com/youruser/inotel"
+    screenshots={[logoImg]}
     related={[
       { key: 'containers', title: 'Tracking Containers', tag: 'Dashboard', imageSrc: portImg },
       { key: 'lotus', title: 'Lotus', tag: 'Framer Template', imageSrc: lotusImg },

@@ -13,6 +13,8 @@ const Quantum: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) 
     category="Directory Website"
     tool="React"
     heroImage={reactLogo}
+    repoUrl="https://github.com/youruser/quantum-repetition-code"
+    screenshots={[reactLogo]}
     related={[
       { key: 'containers', title: 'Tracking Containers', tag: 'Dashboard', imageSrc: portImg },
       { key: 'lotus', title: 'Lotus', tag: 'Framer Template', imageSrc: lotusImg },

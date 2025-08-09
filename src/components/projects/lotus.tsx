@@ -13,6 +13,8 @@ const Lotus: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) =>
     category="Framer Template"
     tool="Framer"
     heroImage={lotusImg}
+    repoUrl="https://github.com/youruser/lotus"
+    screenshots={[lotusImg]}
     related={[
       { key: 'containers', title: 'Tracking Containers', tag: 'Dashboard', imageSrc: portImg },
       { key: 'inotel', title: 'Inotel', tag: 'SaaS Dashboard', imageSrc: logoImg },

@@ -13,6 +13,8 @@ const SRS: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) => v
     category="Landing Page"
     tool="React"
     heroImage={logoImg}
+    repoUrl="https://github.com/youruser/smart-room-service"
+    screenshots={[logoImg]}
     related={[
       { key: 'containers', title: 'Tracking Containers', tag: 'Dashboard', imageSrc: portImg },
       { key: 'lotus', title: 'Lotus', tag: 'Framer Template', imageSrc: lotusImg },

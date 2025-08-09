@@ -219,6 +219,18 @@ body.modal-open .app-layout { filter: blur(3px); }
 
 .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; }
 
+.detail-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.detail-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.repo-btn { white-space: nowrap; padding: 8px 14px; font-size: 0.95rem; background: #1A1A1A; border-color: rgba(255,255,255,0.2); color: var(--text); }
+.repo-btn:hover { background: #0f0f0f; border-color: rgba(255,255,255,0.25); color: var(--text); }
+
+.project-hero-image { margin: 16px 0; border: 1px dashed var(--border); border-radius: var(--radius); overflow: hidden; background: #0f0f0f; }
+.project-hero-image img { width: 100%; height: auto; display: block; }
+
+.screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 12px 0 24px; }
+.screenshot-item { background: #0f0f0f; border: 1px dashed var(--border); border-radius: var(--radius); overflow: hidden; }
+.screenshot-item img { width: 100%; height: auto; display: block; }
+
 @media (max-width: 900px) {
   .projects-page .projects-grid { grid-template-columns: 1fr; }
   .projects-page .project-thumb { height: 220px; }
