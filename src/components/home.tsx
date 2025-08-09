@@ -18,49 +18,51 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
         <button className="hero-btn" onClick={() => onSelect('about')}>About Me</button>
       </div>
     </section>
+  <div className="page-animate">
     <hr className="hero-separator" />
 
-  {/* Selected Projects (template) */}
-  <section className="projects-section">
-    <div className="projects-header">
-      <h2 className="section-title">Selected Projects</h2>
-      <button className="hero-btn">All Projects</button>
-    </div>
-    <div className="projects-grid">
-      {[
-        { title: 'Lucis', href: '#', img: '/icon.png' },
-        { title: 'Capture', href: '#', img: '/icon.png' },
-        { title: 'Zenith', href: '#', img: '/icon.png' },
-      ].map((p) => (
-        <div key={p.title} className="project-card">
-          <a
-            href={p.href}
-            className="project-visit"
-            aria-label={`Open ${p.title}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M8 7H17V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-          <div className="project-thumb">
-            <img src={p.img} alt={p.title} />
+    {/* Selected Projects (template) */}
+    <section className="projects-section">
+      <div className="projects-header">
+        <h2 className="section-title">Selected Projects</h2>
+        <button className="hero-btn">All Projects</button>
+      </div>
+      <div className="projects-grid">
+        {[
+          { title: 'Lucis', href: '#', img: '/icon.png' },
+          { title: 'Capture', href: '#', img: '/icon.png' },
+          { title: 'Zenith', href: '#', img: '/icon.png' },
+        ].map((p) => (
+          <div key={p.title} className="project-card">
+            <a
+              href={p.href}
+              className="project-visit"
+              aria-label={`Open ${p.title}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 7H17V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+            <div className="project-thumb">
+              <img src={p.img} alt={p.title} />
+            </div>
+            <div className="project-meta">
+              <div className="project-title">{p.title}</div>
+            </div>
           </div>
-          <div className="project-meta">
-            <div className="project-title">{p.title}</div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
+        ))}
+      </div>
+    </section>
 
-  {/* My Stack (same section as About) */}
-  <section className="stack-section">
-    <h2 className="section-title">My Stack</h2>
-    <StackByCategory />
-  </section>
+    {/* My Stack (same section as About) */}
+    <section className="stack-section">
+      <h2 className="section-title">My Stack</h2>
+      <StackByCategory />
+    </section>
+  </div>
   </>
 );
 
