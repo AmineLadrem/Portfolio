@@ -62,6 +62,8 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
       <h2 className="section-title">My Stack</h2>
       <StackByCategory />
     </section>
+     {/* empty div  */}
+     <div style={{ height: '100px' }} />
   </div>
   </>
 );

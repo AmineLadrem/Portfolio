@@ -1,0 +1,73 @@
+.services-section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.services-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* enforce 2x2 on desktop */
+  }
+}
+
+.service-card {
+  background: var(--panel);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.service-price {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+}
+
+.service-title { margin: 0; }
+
+.service-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 12px 0;
+}
+
+.service-title-icons {
+  display: inline-flex;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.service-title-icons svg { font-size: 16px; opacity: 0.85; }
+
+.service-description {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.service-actions { margin-top: 18px; display: flex; gap: 12px; }
+
+.service-list {
+  color: var(--muted);
+  margin: 8px 0 16px 16px;
+}
+
+.service-list li { margin: 6px 0; }
+
+
