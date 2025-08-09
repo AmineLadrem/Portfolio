@@ -11,8 +11,6 @@ import Projects from './components/projects';
 import Blog from './components/blog';
 import Contact from './components/contact';
 
-const Shop = () => <h2>Shop</h2>;
-
 function App() {
   const [selected, setSelected] = useState('home');
 
@@ -35,9 +33,6 @@ function App() {
       break;
     case 'contact':
       Content = <Contact />;
-      break;
-    case 'shop':
-      Content = <Shop />;
       break;
     default:
       Content = <Home onSelect={setSelected} />;

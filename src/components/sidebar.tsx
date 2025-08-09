@@ -1,14 +1,13 @@
 import '../css/sidebar.css';
 import '../App.css';
 import profileImg from '../assets/profile.jpg';
-import { FiUser, FiBriefcase, FiMonitor, FiBookOpen, FiMail, FiHome, FiShoppingCart, FiTwitter, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
+import { FiUser, FiBriefcase, FiMonitor, FiBookOpen, FiMail, FiHome, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const menuItems = [
   { key: 'home', label: 'Home', icon: <FiHome /> },
   { key: 'about', label: 'About', icon: <FiUser /> },
   { key: 'services', label: 'Services', icon: <FiBriefcase /> },
   { key: 'projects', label: 'Projects', icon: <FiMonitor /> },
-  { key: 'shop', label: 'Shop', icon: <FiShoppingCart /> },
   { key: 'blog', label: 'Blog', icon: <FiBookOpen /> },
   { key: 'contact', label: 'Contact', icon: <FiMail /> },
 ];

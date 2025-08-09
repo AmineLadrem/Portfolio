@@ -36,8 +36,8 @@ const About: React.FC<AboutProps> = ({ onSelect }) => (
           <div className="stat-label">Years of Experience</div>
         </div>
         <div className="stat">
-          <div className="stat-number">150+</div>
-          <div className="stat-label">Projects Completed</div>
+          <div className="stat-number">IoT • AI • Web</div>
+          <div className="stat-label">Specialized Solutions</div>
         </div>
       </div>
 
