@@ -8,7 +8,6 @@ const menuItems = [
   { key: 'about', label: 'About', icon: <FiUser /> },
   { key: 'services', label: 'Services', icon: <FiBriefcase /> },
   { key: 'projects', label: 'Projects', icon: <FiMonitor /> },
-  { key: 'blog', label: 'Blog', icon: <FiBookOpen /> },
   { key: 'contact', label: 'Contact', icon: <FiMail /> },
 ];
 

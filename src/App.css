@@ -184,3 +184,42 @@ body.modal-open .app-layout { filter: blur(3px); }
 .project-meta { display: flex; justify-content: space-between; padding: 10px 12px; }
 .project-title { font-weight: 600; }
 .project-tag { color: var(--muted); font-size: 0.9rem; }
+
+/* Projects page-specific adjustments */
+.projects-page .divider { margin-top: 20px; margin-bottom: 40px; } /* padding under separator */
+.projects-page .projects-grid {
+  grid-template-columns: repeat(2, 1fr); /* two per row */
+  gap: 20px;
+}
+.projects-page .project-thumb { height: 280px; }
+.projects-page .project-thumb img {
+  object-fit: contain;
+  transform: scale(0.94); /* slightly zoomed out by default */
+  transition: transform 300ms ease;
+  transform-origin: center;
+}
+.projects-page .project-card:hover .project-thumb img { transform: scale(1.02); }
+
+/* Project detail page */
+.project-detail .project-detail-desc { color: var(--muted); max-width: 900px; }
+.project-info-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 16px 0 24px 0;
+  background: var(--panel);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.project-info-item { border-right: 1px dashed var(--border); padding-inline: 12px; }
+.project-info-item:last-child { border-right: none; }
+.project-info-label { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
+.project-info-value { font-weight: 600; }
+
+.back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; }
+
+@media (max-width: 900px) {
+  .projects-page .projects-grid { grid-template-columns: 1fr; }
+  .projects-page .project-thumb { height: 220px; }
+}
