@@ -23,7 +23,6 @@ const PROJECTS: ProjectItem[] = [
   { title: 'Smart Room Service', tag: 'Landing Page', imageSrc: logoImg, titleKey: 'srs' },
   { title: 'Error-Free-Quantum-States---Repetition-Code', tag: 'Directory Website', imageSrc: reactLogo, titleKey: 'quantum' },
   { title: 'Inotel', tag: 'SaaS Dashboard', imageSrc: logoImg, titleKey: 'inotel' },
-  { title: 'Atlas', tag: 'Marketing Site', imageSrc: reactLogo, titleKey: 'lotus' },
 ];
 
 type DetailRenderer = (props: { onBackToAll: () => void; onOpenProject: (key: string) => void }) => React.ReactElement;
