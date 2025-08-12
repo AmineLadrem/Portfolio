@@ -20,7 +20,7 @@ type ProjectDetailProps = {
   screenshots?: string[];
   related?: RelatedProject[];
   onBackToAll: () => void;
-  onOpenProject: (key: string) => void;
+  onOpenProject?: (key: string) => void;
 };
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({
@@ -33,9 +33,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   heroImage,
   repoUrl,
   screenshots = [],
-  related = [],
   onBackToAll,
-  onOpenProject,
 }) => {
   return (
     <section className="project-detail page-animate">
@@ -90,34 +88,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         </div>
       )}
 
-      <div className="projects-header" style={{ marginTop: 32 }}>
-        <h2 className="section-title">View More Projects</h2>
-      </div>
-      <div className="projects-grid">
-        {related.map((p) => (
-          <div
-            key={p.key}
-            className="project-card"
-            onClick={() => onOpenProject(p.key)}
-            role="button"
-          >
-            <a className="project-visit" aria-label={`Open ${p.title}`}>
-              {/* icon is decorative; using CSS from App.css */}
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 7H17V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-            <div className="project-thumb">
-              <img src={p.imageSrc} alt={p.title} />
-            </div>
-            <div className="project-meta">
-              <div className="project-title">{p.title}</div>
-              <div className="project-tag">{p.tag}</div>
-            </div>
-          </div>
-        ))}
-      </div>
+      {/* Related section removed as requested */}
     </section>
   );
 };
