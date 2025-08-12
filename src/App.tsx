@@ -8,7 +8,6 @@ import Home from './components/home';
 import About from './components/about';
 import Services from './components/services';
 import Projects from './components/projects';
-import Blog from './components/blog';
 import Contact from './components/contact';
 
 function App() {
@@ -27,9 +26,6 @@ function App() {
       break;
     case 'projects':
       Content = <Projects />;
-      break;
-    case 'blog':
-      Content = <Blog />;
       break;
     case 'contact':
       Content = <Contact />;
