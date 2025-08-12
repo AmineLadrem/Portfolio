@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
             <div className="socials">
               <a className="chip" href="https://github.com/AmineLadrem"><FiGithub /> Github</a>
               <a className="chip" href="https://www.linkedin.com/in/abd-ul-haq-amine-ladrem/"><FiLinkedin /> LinkedIn</a>
-              <a className="chip" href="#"><FiInstagram /> Instagram</a>
+              <a className="chip" href="https://www.instagram.com/awpxr/"><FiInstagram /> Instagram</a>
             </div>
           </div>
         </aside>

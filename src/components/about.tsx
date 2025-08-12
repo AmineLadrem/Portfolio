@@ -19,7 +19,7 @@ const About: React.FC<AboutProps> = ({ onSelect }) => (
           className="hero-btn"
           onClick={() => onSelect('services')}
         >
-          View Services
+          View My Expertise
         </button>
       </div>
     </section>

@@ -6,7 +6,7 @@ import { FiUser, FiBriefcase, FiMonitor, FiMail, FiHome, FiLinkedin, FiInstagram
 const menuItems = [
   { key: 'home', label: 'Home', icon: <FiHome /> },
   { key: 'about', label: 'About', icon: <FiUser /> },
-  { key: 'services', label: 'Services', icon: <FiBriefcase /> },
+  { key: 'services', label: 'My Expertise', icon: <FiBriefcase /> },
   { key: 'projects', label: 'Projects', icon: <FiMonitor /> },
   { key: 'contact', label: 'Contact', icon: <FiMail /> },
 ];
@@ -41,7 +41,7 @@ const Sidebar = ({ selected, onSelect }: { selected: string, onSelect: (key: str
       <div className="sidebar-socials">
         <a href="https://github.com/AmineLadrem"><FiGithub /></a>
         <a href="https://www.linkedin.com/in/abd-ul-haq-amine-ladrem/"><FiLinkedin /></a>
-        <a href="#"><FiInstagram /></a>
+        <a href="https://www.instagram.com/awpxr/"><FiInstagram /></a>
       </div>
     </div>
   </aside>

@@ -5,7 +5,7 @@ import { FiWifi, FiCpu, FiServer, FiDatabase, FiMonitor, FiTool, FiAperture } fr
 const Services: React.FC = () => {
   return (
     <section className="services-section page-animate">
-      <h1 className="services-heading">My Services</h1>
+      <h1 className="services-heading">My Expertise</h1>
       <hr className="divider" />
 
       <div className="services-grid">
