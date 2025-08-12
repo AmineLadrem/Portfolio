@@ -25,7 +25,7 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
     <section className="projects-section">
       <div className="projects-header">
         <h2 className="section-title">Selected Projects</h2>
-        <button className="hero-btn">All Projects</button>
+        <button className="hero-btn" onClick={() => onSelect('projects')}>All Projects</button>
       </div>
       <div className="projects-grid">
         {[
