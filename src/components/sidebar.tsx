@@ -1,7 +1,7 @@
 import '../css/sidebar.css';
 import '../App.css';
 import profileImg from '../assets/profile.jpg';
-import { FiUser, FiBriefcase, FiMonitor, FiBookOpen, FiMail, FiHome, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
+import { FiUser, FiBriefcase, FiMonitor, FiMail, FiHome, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const menuItems = [
   { key: 'home', label: 'Home', icon: <FiHome /> },

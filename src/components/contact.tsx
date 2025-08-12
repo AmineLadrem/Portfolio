@@ -1,5 +1,5 @@
-import React, { FormEvent } from 'react';
-import { FiMail, FiTwitter, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
+import { type FormEvent } from 'react';
+import { FiMail, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const Contact: React.FC = () => {
   const handleSubmit = (e: FormEvent) => {
