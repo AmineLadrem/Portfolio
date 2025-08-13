@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectDetail from './ProjectDetail';
-import logoImg from '../../assets/logo.png';
-import lotusImg from '../../assets/Lotus.png';
-import portImg from '../../assets/port.png';
-
+import Inotel1 from '../../assets/inotel1.png';
+import Inotel2 from '../../assets/inotel2.png';
+import Inotel3 from '../../assets/inotel3.png';
+import Inotel4 from '../../assets/inotel4.png';
 const Inotel: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) => void; }> = ({ onBackToAll, onOpenProject }) => (
   <ProjectDetail
     title="Inotel"
@@ -11,14 +11,9 @@ const Inotel: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) =
     year="2024"
     service="Backend / Web Dev"
     category="SaaS Dashboard"
-    tool="React, Node.js"
-    heroImage={logoImg}
-    repoUrl="https://github.com/youruser/inotel"
-    screenshots={[logoImg]}
-    related={[
-      { key: 'containers', title: 'Tracking Containers', tag: 'Dashboard', imageSrc: portImg },
-      { key: 'lotus', title: 'Lotus', tag: 'Framer Template', imageSrc: lotusImg },
-    ]}
+    tool="React, Node.js, Node-RED, MySQL"
+    repoUrl="https://github.com/AmineLadrem/InnoByte-Inotel"
+    screenshots={[Inotel1, Inotel2, Inotel3, Inotel4]}
     onBackToAll={onBackToAll}
     onOpenProject={onOpenProject}
   />
