@@ -1,13 +1,12 @@
 import React from 'react';
 import ProjectDetail from './ProjectDetail';
-import portImg from '../../assets/port.png';
-import Containers1 from '../../assets/container1.png';
-import Containers2 from '../../assets/container2.png';
-import Containers3 from '../../assets/container3.png';
-import Containers4 from '../../assets/container4.png';
-import Containers5 from '../../assets/container5.png';
-import Containers6 from '../../assets/container6.png';
-import Containers7 from '../../assets/container7.png';
+import Containers1 from '../../assets/projects/containers/container1.png';
+import Containers2 from '../../assets/projects/containers/container2.png';
+import Containers3 from '../../assets/projects/containers/container3.png';
+import Containers4 from '../../assets/projects/containers/container4.png';
+import Containers5 from '../../assets/projects/containers/container5.png';
+import Containers6 from '../../assets/projects/containers/container6.png';
+import Containers7 from '../../assets/projects/containers/container7.png';
 
 const Containers: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) => void; }> = ({ onBackToAll, onOpenProject }) => {
   return (

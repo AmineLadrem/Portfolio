@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
-import reactLogo from '../assets/react.svg';
+import reactLogo from '../assets/brand/react.svg';
 import Containers from './projects/containers';
 import Lotus from './projects/lotus';
 import SRS from './projects/srs';
 import Inotel from './projects/inotel';
 import Quantum from './projects/quantum';
-import portImg from '../assets/port.png';
-import lotusImg from '../assets/Lotus.png';
-import logoImg from '../assets/logo.png';
+import portImg from '../assets/projects/containers/port.png';
+import lotusImg from '../assets/projects/lotus/Lotus.png';
+import logoImg from '../assets/brand/logo.png';
 
 type ProjectItem = {
   title: string;

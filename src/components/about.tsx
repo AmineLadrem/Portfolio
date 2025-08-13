@@ -1,6 +1,6 @@
 import React from 'react';
 import StackByCategory from './StackByCategory';
-import profileImageUrl from '../assets/profile.jpg';
+import profileImageUrl from '../assets/brand/profile.jpg';
 
 type AboutProps = { onSelect: (key: string) => void };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectDetail from './ProjectDetail';
-import quantumImg from '../../assets/quantum-ss-1.png';
+import quantumImg from '../../assets/projects/quantum/quantum-ss-1.png';
 
 const Quantum: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) => void; }> = ({ onBackToAll, onOpenProject }) => (
   <ProjectDetail

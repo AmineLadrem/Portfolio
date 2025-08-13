@@ -1,6 +1,6 @@
 import '../css/sidebar.css';
 import '../App.css';
-import profileImg from '../assets/profile.jpg';
+import profileImg from '../assets/brand/profile.jpg';
 import { FiUser, FiBriefcase, FiMonitor, FiMail, FiHome, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const menuItems = [

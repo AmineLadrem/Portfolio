@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectDetail from './ProjectDetail';
-import Inotel1 from '../../assets/inotel1.png';
-import Inotel2 from '../../assets/inotel2.png';
-import Inotel3 from '../../assets/inotel3.png';
-import Inotel4 from '../../assets/inotel4.png';
+import Inotel1 from '../../assets/projects/inotel/inotel1.png';
+import Inotel2 from '../../assets/projects/inotel/inotel2.png';
+import Inotel3 from '../../assets/projects/inotel/inotel3.png';
+import Inotel4 from '../../assets/projects/inotel/inotel4.png';
 const Inotel: React.FC<{ onBackToAll: () => void; onOpenProject: (key: string) => void; }> = ({ onBackToAll, onOpenProject }) => (
   <ProjectDetail
     title="Inotel"
