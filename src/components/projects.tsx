@@ -19,7 +19,7 @@ type ProjectItem = {
 
 const PROJECTS: ProjectItem[] = [
   { title: 'Tracking Containers', tag: 'IoT / Web Project', imageSrc: portImg, titleKey: 'containers' },
-  { title: 'Lotus', tag: 'Mobile app / Web app', imageSrc: lotusImg, titleKey: 'lotus' },
+  { title: 'Lotus', tag: 'Mobile app / Web Dashboard', imageSrc: lotusImg, titleKey: 'lotus' },
   { title: 'Smart Room Service', tag: 'IoT Project', imageSrc: logoImg, titleKey: 'srs' },
   { title: 'Error-Free-Quantum-States---Repetition-Code', tag: 'Quantum Computing Project', imageSrc: reactLogo, titleKey: 'quantum' },
   { title: 'Inotel', tag: 'SaaS Dashboard', imageSrc: logoImg, titleKey: 'inotel' },

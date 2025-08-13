@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
 export type RelatedProject = {
@@ -81,10 +81,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
       {screenshots.length > 0 && (
         <div className="screenshot-grid">
           {screenshots.map((src, idx) => (
-            <div key={idx} className="screenshot-item">
-              <img src={src} alt={`${title} screenshot ${idx + 1}`} />
-            </div>
-          ))}
+            <Screenshot key={idx} src={src} alt={`${title} screenshot ${idx + 1}`} />)
+          )}
         </div>
       )}
 
@@ -95,4 +93,19 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
 
 export default ProjectDetail;
 
+const Screenshot: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
+  const [isWide, setIsWide] = useState<boolean | null>(null);
+  return (
+    <div className={`screenshot-item ${isWide ? 'wide' : 'tall'}`}>
+      <img
+        src={src}
+        alt={alt}
+        onLoad={(e) => {
+          const img = e.currentTarget as HTMLImageElement;
+          setIsWide(img.naturalWidth >= img.naturalHeight);
+        }}
+      />
+    </div>
+  );
+};
 
