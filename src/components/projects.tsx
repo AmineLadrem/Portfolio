@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import reactLogo from '../assets/react.svg';
 import Containers from './projects/containers';
@@ -37,9 +37,25 @@ const detailMap: Record<string, DetailRenderer> = {
 const Projects: React.FC = () => {
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
+  // Sync with hash for detail pages
+  useEffect(() => {
+    const syncFromHash = () => {
+      const hash = window.location.hash;
+      const m = hash.match(/^#\/projects\/(.+)$/);
+      if (m) {
+        setActiveKey(m[1]);
+      } else {
+        setActiveKey(null);
+      }
+    };
+    syncFromHash();
+    window.addEventListener('hashchange', syncFromHash);
+    return () => window.removeEventListener('hashchange', syncFromHash);
+  }, []);
+
   if (activeKey && detailMap[activeKey]) {
     const Detail = detailMap[activeKey];
-    return <Detail onBackToAll={() => setActiveKey(null)} onOpenProject={setActiveKey} />;
+    return <Detail onBackToAll={() => (window.location.hash = '#/projects')} onOpenProject={(k) => (window.location.hash = `#/projects/${k}`)} />;
   }
 
   return (
@@ -49,7 +65,7 @@ const Projects: React.FC = () => {
 
       <div className="projects-grid">
         {PROJECTS.map((project) => (
-          <article key={project.title} className="project-card" onClick={() => setActiveKey(project.titleKey)}>
+          <article key={project.title} className="project-card" onClick={() => (window.location.hash = `#/projects/${project.titleKey}`)}>
             <div className="project-thumb">
               <img src={project.imageSrc} alt={`${project.title} preview`} />
               <div className="project-visit" aria-hidden>

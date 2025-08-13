@@ -11,7 +11,7 @@ const menuItems = [
   { key: 'contact', label: 'Contact', icon: <FiMail /> },
 ];
 
-const Sidebar = ({ selected, onSelect }: { selected: string, onSelect: (key: string) => void }) => (
+const Sidebar = ({ selected }: { selected: string, onSelect: (key: string) => void }) => (
   <aside className="sidebar">
     <div className="profile-section">
       <img src={profileImg} alt="Profile" className="profile-img" />
@@ -25,12 +25,8 @@ const Sidebar = ({ selected, onSelect }: { selected: string, onSelect: (key: str
       {menuItems.map(item => (
         <a
           key={item.key}
-          href="#"
+          href={`#/${item.key}`}
           className={selected === item.key ? 'selected' : ''}
-          onClick={e => {
-            e.preventDefault();
-            onSelect(item.key);
-          }}
         >
           {item.icon} {item.label}
         </a>

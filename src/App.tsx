@@ -3,7 +3,7 @@ import './App.css';
 import './css/hero.css';
 import './css/about.css';
 import './css/contact.css';
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Home from './components/home';
 import About from './components/about';
 import Services from './components/services';
@@ -11,32 +11,55 @@ import Projects from './components/projects';
 import Contact from './components/contact';
 
 function App() {
-  const [selected, setSelected] = useState('home');
+  const getHashPath = () => {
+    const hash = window.location.hash || '#/home';
+    return hash.startsWith('#') ? hash.slice(1) : hash;
+  };
+
+  const [path, setPath] = useState(getHashPath());
+
+  useEffect(() => {
+    const onHashChange = () => setPath(getHashPath());
+    window.addEventListener('hashchange', onHashChange);
+    if (!window.location.hash) {
+      window.location.hash = '#/home';
+    }
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  const routeParts = useMemo(() => path.replace(/^\/+/, '').split('/'), [path]);
+  const top = routeParts[0] || 'home';
+  const sub = routeParts[1];
 
   let Content;
-  switch (selected) {
+  switch (top) {
     case 'home':
-      Content = <Home onSelect={setSelected} />;
+      Content = <Home onSelect={(k) => (window.location.hash = `#/${k}`)} />;
       break;
     case 'about':
-      Content = <About onSelect={setSelected} />;
+      Content = <About onSelect={(k) => (window.location.hash = `#/${k}`)} />;
       break;
     case 'services':
       Content = <Services />;
       break;
     case 'projects':
-      Content = <Projects />;
+      if (sub) {
+        // Project detail routes are rendered inside Projects component based on hash
+        Content = <Projects />;
+      } else {
+        Content = <Projects />;
+      }
       break;
     case 'contact':
       Content = <Contact />;
       break;
     default:
-      Content = <Home onSelect={setSelected} />;
+      Content = <Home onSelect={(k) => (window.location.hash = `#/${k}`)} />;
   }
 
   return (
     <div className="app-layout">
-      <Sidebar selected={selected} onSelect={setSelected} />
+      <Sidebar selected={top} onSelect={(k) => (window.location.hash = `#/${k}`)} />
       <div className="main-container">
         {Content}
       </div>
