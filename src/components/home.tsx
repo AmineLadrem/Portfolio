@@ -1,4 +1,7 @@
 import StackByCategory from './StackByCategory';
+import portImg from '../assets/port.png';
+import lotusImg from '../assets/Lotus.png';
+import logoImg from '../assets/logo.png';
 
 const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
   <>
@@ -29,9 +32,9 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
       </div>
       <div className="projects-grid">
         {[
-          { title: 'Lucis', href: '#', img: '/icon.png' },
-          { title: 'Capture', href: '#', img: '/icon.png' },
-          { title: 'Zenith', href: '#', img: '/icon.png' },
+          { title: 'Tracking Containers', href: '#/projects/containers', img: portImg },
+          { title: 'Smart Room Service', href: '#/projects/srs', img: logoImg },
+          { title: 'Lotus', href: '#/projects/lotus', img: lotusImg },
         ].map((p) => (
           <div key={p.title} className="project-card">
             <a
