@@ -14,7 +14,7 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
         I'm a IoT Developer and a Software Engineer.
       </h1>
       <p className="hero-subtitle">
-        Highly motivated Software Developer with expertise in full-stack development and IoT solutions, currently pursuing studies in Machine Intelligence.
+        Highly motivated Software Developer with expertise in full-stack development and IoT solutions, currently pursuing master studies in Machine Intelligence.
       </p>
       <div className="hero-actions">
         <button className="hero-btn primary" onClick={() => onSelect('contact')}>Get In Touch</button>
