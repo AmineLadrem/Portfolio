@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
-import reactLogo from '../assets/brand/react.svg';
 import Containers from './projects/containers';
 import Lotus from './projects/lotus';
 import SRS from './projects/srs';
