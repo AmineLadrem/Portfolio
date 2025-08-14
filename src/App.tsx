@@ -31,6 +31,16 @@ function App() {
   const top = routeParts[0] || 'home';
   const sub = routeParts[1];
 
+  // Ensure new pages start at the top of the scrollable container
+  useEffect(() => {
+    const container = document.querySelector('.main-container') as HTMLElement | null;
+    if (container) {
+      container.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+    // Fallback for any window-level scroll
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [path]);
+
   let Content;
   switch (top) {
     case 'home':
