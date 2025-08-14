@@ -80,7 +80,7 @@ const About: React.FC<AboutProps> = ({ onSelect }) => (
               <li>Built a web dashboard for access management using Node‑RED, MariaDB, and HTML/CSS/JS.</li>
             </ul>
 
-            <div className="exp-subrole">Metro d'Alger – Tripod Access Control System</div>
+            <div className="exp-subrole">Metro d'Alger – Tripod Access Control System with QR Code</div>
             <ul className="exp-bullets">
               <li>Implemented secure communication between remote servers and tripod gates.</li>
               <li>Delivered Python services with SSH/SFTP data exchange and a monitoring web UI.</li>
