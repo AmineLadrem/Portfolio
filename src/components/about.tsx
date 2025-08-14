@@ -90,7 +90,7 @@ const About: React.FC<AboutProps> = ({ onSelect }) => (
             <div className="exp-meta">Port of Algiers, Algeria | Jan 2023 - Jun 2023</div>
             <div className="exp-role">Intern – Full‑Stack Developer</div>
             <p className="exp-desc">
-              Developed a mobile/web app for real‑time container tracking using Flutter, Laravel, MySQL and Firebase.
+            Developed a mobile/web app for real-time container tracking using Flutter, Laravel, MySQL, and Firebase. In addition, I used IoT tools such as Arduino and a GPS module to track the containers with HTTPS API.
             </p>
           </div>
         </div>
