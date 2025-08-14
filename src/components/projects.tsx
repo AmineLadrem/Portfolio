@@ -10,6 +10,7 @@ import portImg from '../assets/projects/containers/port.png';
 import lotusImg from '../assets/projects/lotus/Lotus.png';
 import inotelImg from '../assets/projects/inotel/inotel.png';
 import srsImg from '../assets/projects/srs/SRS.png';
+import quantumImg from '../assets/projects/quantum/quantum.png';
 
 type ProjectItem = {
   title: string;
@@ -22,7 +23,7 @@ const PROJECTS: ProjectItem[] = [
   { title: 'Tracking Containers', tag: 'IoT / Web Project', imageSrc: portImg, titleKey: 'containers' },
   { title: 'Lotus', tag: 'Mobile app / Web Dashboard', imageSrc: lotusImg, titleKey: 'lotus' },
   { title: 'Smart Room Service', tag: 'IoT Project', imageSrc: srsImg, titleKey: 'srs' },
-  { title: 'Error-Free-Quantum-States---Repetition-Code', tag: 'Quantum Computing Project', imageSrc: reactLogo, titleKey: 'quantum' },
+  { title: 'Error-Free-Quantum-States---Repetition-Code', tag: 'Quantum Computing Project', imageSrc: quantumImg, titleKey: 'quantum' },
   { title: 'Inotel', tag: 'SaaS Dashboard', imageSrc: inotelImg, titleKey: 'inotel' },
 ];
 
