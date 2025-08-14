@@ -8,7 +8,8 @@ import Inotel from './projects/inotel';
 import Quantum from './projects/quantum';
 import portImg from '../assets/projects/containers/port.png';
 import lotusImg from '../assets/projects/lotus/Lotus.png';
-import logoImg from '../assets/brand/logo.png';
+import inotelImg from '../assets/projects/inotel/inotel.png';
+import srsImg from '../assets/projects/srs/SRS.png';
 
 type ProjectItem = {
   title: string;
@@ -20,9 +21,9 @@ type ProjectItem = {
 const PROJECTS: ProjectItem[] = [
   { title: 'Tracking Containers', tag: 'IoT / Web Project', imageSrc: portImg, titleKey: 'containers' },
   { title: 'Lotus', tag: 'Mobile app / Web Dashboard', imageSrc: lotusImg, titleKey: 'lotus' },
-  { title: 'Smart Room Service', tag: 'IoT Project', imageSrc: logoImg, titleKey: 'srs' },
+  { title: 'Smart Room Service', tag: 'IoT Project', imageSrc: srsImg, titleKey: 'srs' },
   { title: 'Error-Free-Quantum-States---Repetition-Code', tag: 'Quantum Computing Project', imageSrc: reactLogo, titleKey: 'quantum' },
-  { title: 'Inotel', tag: 'SaaS Dashboard', imageSrc: logoImg, titleKey: 'inotel' },
+  { title: 'Inotel', tag: 'SaaS Dashboard', imageSrc: inotelImg, titleKey: 'inotel' },
 ];
 
 type DetailRenderer = (props: { onBackToAll: () => void; onOpenProject: (key: string) => void }) => React.ReactElement;

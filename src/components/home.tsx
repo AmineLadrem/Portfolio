@@ -1,7 +1,7 @@
 import StackByCategory from './StackByCategory';
 import portImg from '../assets/projects/containers/port.png';
 import lotusImg from '../assets/projects/lotus/Lotus.png';
-import logoImg from '../assets/brand/logo.png';
+import logoImg from '../assets/projects/srs/SRS.png';
 
 const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
   <>
