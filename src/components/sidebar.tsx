@@ -11,8 +11,8 @@ const menuItems = [
   { key: 'contact', label: 'Contact', icon: <FiMail /> },
 ];
 
-const Sidebar = ({ selected }: { selected: string, onSelect: (key: string) => void }) => (
-  <aside className="sidebar">
+const Sidebar = ({ selected, className = '' }: { selected: string, onSelect: (key: string) => void, className?: string }) => (
+  <aside className={`sidebar ${className}`}>
     <div className="profile-section">
       <img src={profileImg} alt="Profile" className="profile-img" />
       <div>
@@ -21,7 +21,12 @@ const Sidebar = ({ selected }: { selected: string, onSelect: (key: string) => vo
       </div>
     </div>
     <hr className="sidebar-divider" />
-    <nav className="sidebar-menu">
+    <nav className="sidebar-menu" onClick={() => {
+      // Close sidebar after navigating on mobile
+      document.querySelector('.sidebar')?.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+      document.querySelector('.sidebar-backdrop')?.classList.remove('is-open');
+    }}>
       {menuItems.map(item => (
         <a
           key={item.key}

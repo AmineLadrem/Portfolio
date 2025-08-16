@@ -69,8 +69,32 @@ function App() {
 
   return (
     <div className="app-layout">
+      <button
+        className="mobile-menu-btn"
+        aria-label="Open menu"
+        onClick={() => {
+          document.querySelector('.sidebar')?.classList.add('is-open');
+          document.body.classList.add('modal-open');
+          document.querySelector('.sidebar-backdrop')?.classList.add('is-open');
+        }}
+      >
+        Menu
+      </button>
       <Sidebar selected={top} onSelect={(k) => (window.location.hash = `#/${k}`)} />
-      <div className="main-container">
+      <div
+        className="sidebar-backdrop"
+        onClick={() => {
+          document.querySelector('.sidebar')?.classList.remove('is-open');
+          document.body.classList.remove('modal-open');
+          document.querySelector('.sidebar-backdrop')?.classList.remove('is-open');
+        }}
+      />
+      <div className="main-container" onClick={() => {
+        // Close sidebar if open when clicking main content on mobile
+        document.querySelector('.sidebar')?.classList.remove('is-open');
+        document.body.classList.remove('modal-open');
+        document.querySelector('.sidebar-backdrop')?.classList.remove('is-open');
+      }}>
         {Content}
       </div>
     </div>

@@ -5,7 +5,7 @@
     color: #bdbdbd;
     display: flex;
     flex-direction: column;
- 
+    border-right: 1px solid var(--border);
   }
   
   .profile-section {
@@ -103,4 +103,20 @@
   
   .sidebar-socials a:hover {
     color: #fff;
+  }
+
+  /* Mobile: slide-in sidebar */
+  @media (max-width: 960px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      transform: translateX(-100%);
+      transition: transform 250ms ease-in-out;
+      z-index: 1000; /* above backdrop(900) and button(800) */
+    }
+    .sidebar.is-open {
+      transform: translateX(0);
+    }
   }

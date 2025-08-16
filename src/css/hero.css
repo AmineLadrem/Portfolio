@@ -114,3 +114,12 @@
   animation: fadeUp 600ms ease-out forwards;
   animation-delay: 520ms;
 } 
+
+@media (max-width: 960px) {
+  .hero-title { font-size: 2.4rem; }
+}
+
+@media (max-width: 640px) {
+  .hero-title { font-size: 2rem; }
+  .hero-actions { flex-wrap: wrap; }
+}
