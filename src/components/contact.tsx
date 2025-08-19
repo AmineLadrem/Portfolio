@@ -1,67 +1,38 @@
-import { type FormEvent } from 'react';
 import { FiMail, FiLinkedin, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const Contact: React.FC = () => {
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-  };
-
   return (
-    <section className="contact page-animate">
+    <section className="contact page-animate minimalist-contact">
       <header className="contact-header">
         <h1 className="hero-title">Contact Me</h1>
-        <p className="hero-subtitle">
-          Feel free to reach out if you have a project idea, or any questions. You can use the form below for project inquiries.
-        </p>
+        <p className="hero-subtitle">I’d love to hear from you — choose your favorite way to connect.</p>
       </header>
 
       <hr className="divider" />
 
-      <div className="contact-grid">
-        <div className="contact-card">
-          <h3 className="contact-card-title">Project Inquiry</h3>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <label className="field">
-              <span className="label">Name</span>
-              <input className="input" type="text" placeholder="Jane Smith" required />
-            </label>
+      <div className="contact-center">
+        <a
+          href="mailto:contact.amineladrem@gmail.com"
+          className="cta-email"
+          aria-label="Send me an email"
+        >
+          <FiMail />
+          <span>Send me an Email</span>
+        </a>
 
-            <label className="field">
-              <span className="label">Email</span>
-              <input className="input" type="email" placeholder="email@gmail.com" required />
-            </label>
-
-            <label className="field">
-              <span className="label">Existing website (optional)</span>
-              <input className="input" type="url" placeholder="Website URL" />
-            </label>
-
-            <label className="field">
-              <span className="label">Project details</span>
-              <textarea className="textarea" rows={6} placeholder="Web design..."></textarea>
-            </label>
-
-            <button className="btn primary" type="submit">Send Inquiry</button>
-          </form>
+        <div className="social-icons" aria-label="Follow me on social media">
+          <a className="icon-btn github" href="https://github.com/AmineLadrem" aria-label="GitHub" target="_blank" rel="noreferrer noopener">
+            <FiGithub />
+          </a>
+          <a className="icon-btn linkedin" href="https://www.linkedin.com/in/abd-ul-haq-amine-ladrem/" aria-label="LinkedIn" target="_blank" rel="noreferrer noopener">
+            <FiLinkedin />
+          </a>
+          <a className="icon-btn instagram" href="https://www.instagram.com/awpxr/" aria-label="Instagram" target="_blank" rel="noreferrer noopener">
+            <FiInstagram />
+          </a>
         </div>
 
-        <aside className="contact-aside">
-          <div className="contact-card">
-            <h4 className="contact-card-title">Let's Connect</h4>
-            <a className="contact-email" href="mailto:amineladrem02@gmail.com">
-              <FiMail /> amineladrem02@gmail.com
-            </a>
-          </div>
-
-          <div className="contact-card">
-            <h4 className="contact-card-title">Follow Me</h4>
-            <div className="socials">
-              <a className="chip" href="https://github.com/AmineLadrem"><FiGithub /> Github</a>
-              <a className="chip" href="https://www.linkedin.com/in/abd-ul-haq-amine-ladrem/"><FiLinkedin /> LinkedIn</a>
-              <a className="chip" href="https://www.instagram.com/awpxr/"><FiInstagram /> Instagram</a>
-            </div>
-          </div>
-        </aside>
+        <p className="contact-tagline">Let’s Build Something Together 🚀</p>
       </div>
     </section>
   );

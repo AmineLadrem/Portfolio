@@ -149,7 +149,8 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ src, alt = '', onClose })
 
 export default ImageLightbox;
 
-function distance(a: Touch, b: Touch): number {
+type PointLike = { clientX: number; clientY: number };
+function distance(a: PointLike, b: PointLike): number {
   const dx = a.clientX - b.clientX;
   const dy = a.clientY - b.clientY;
   return Math.hypot(dx, dy);

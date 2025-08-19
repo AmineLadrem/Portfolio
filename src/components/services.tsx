@@ -62,8 +62,7 @@ const Services: React.FC = () => {
             <div className="service-title-icons"><FiCpu /><FiAperture /></div>
           </div>
           <p className="service-description">
-            Machine learning pipelines, LLM integration, embeddings, vector search, and
-            intelligent automation tailored to your product.
+          Artificial Intelligence concepts and basics of machine learning, including classification and regression, made simple and practical.
           </p>
           <div className="service-actions">
             <a className="btn" href="#contact" aria-label="Get in touch about AI development">
