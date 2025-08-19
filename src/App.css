@@ -143,6 +143,9 @@ html, body, #root { height: 100%; }
 .projects-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
 .project-card { position: relative; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.project-card { cursor: default; }
+/* Standard hand pointer on hover, applied to children too for consistency */
+.project-card:hover, .project-card:hover * { cursor: pointer; }
 .project-thumb { height: 180px; background: #111; border-bottom: 1px dashed var(--border); overflow: hidden; }
 .project-thumb img { width: 100%; height: 100%; object-fit: contain; transform: scale(1); transition: transform 350ms ease; opacity: 0.95; }
 .project-card:hover .project-thumb img { transform: scale(1.02); }
@@ -172,15 +175,34 @@ html, body, #root { height: 100%; }
 .repo-btn { white-space: nowrap; padding: 8px 14px; font-size: 0.95rem; background: #1A1A1A; border-color: rgba(255,255,255,0.2); color: var(--text); }
 .repo-btn:hover { background: #0f0f0f; border-color: rgba(255,255,255,0.25); color: var(--text); }
 .project-hero-image { margin: 16px 0; border: 1px dashed var(--border); border-radius: var(--radius); overflow: hidden; background: #0f0f0f; }
-.project-hero-image img { width: 100%; height: auto; display: block; }
+.project-hero-image img { width: 100%; height: auto; display: block; cursor: pointer; }
 .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 12px 0 24px; }
 .screenshot-item { background: #0f0f0f; border: 1px dashed var(--border); border-radius: var(--radius); overflow: hidden; }
-.screenshot-item img { width: 100%; height: auto; display: block; }
+.screenshot-item img { width: 100%; height: auto; display: block; cursor: pointer; }
 .project-detail .screenshot-grid { grid-template-columns: 1fr; gap: 16px; }
 .project-detail .screenshot-item { width: min(420px, 100%); margin: 0 auto; }
 .project-detail .screenshot-item img { display: block; width: 100%; height: auto; object-fit: contain; }
 .project-detail .screenshot-item.wide { width: min(900px, 100%); }
 .project-detail .screenshot-item.tall { width: min(420px, 100%); }
+
+/* ---- Lightbox ---- */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: grid;
+  place-items: center;
+  z-index: 1200;
+  padding: 24px;
+}
+.lightbox-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+/* removed toolbar per spec */
 
 /* ---- Mobile sidebar toggle ---- */
 .mobile-menu-btn {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ImageLightbox from '../ImageLightbox';
 import { FiArrowLeft } from 'react-icons/fi';
 
 export type RelatedProject = {
@@ -35,6 +36,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   screenshots = [],
   onBackToAll,
 }) => {
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const openLightbox = (src: string) => setLightboxSrc(src);
+  const closeLightbox = () => setLightboxSrc(null);
+
   return (
     <section className="project-detail page-animate">
       <div className="detail-top">
@@ -73,7 +78,18 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
       </div>
 
       {heroImage && (
-        <div className="project-hero-image">
+        <div
+          className="project-hero-image"
+          role="button"
+          tabIndex={0}
+          onClick={() => openLightbox(heroImage)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openLightbox(heroImage);
+            }
+          }}
+        >
           <img src={heroImage} alt={`${title} hero`} />
         </div>
       )}
@@ -81,9 +97,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
       {screenshots.length > 0 && (
         <div className="screenshot-grid">
           {screenshots.map((src, idx) => (
-            <Screenshot key={idx} src={src} alt={`${title} screenshot ${idx + 1}`} />)
+            <Screenshot key={idx} src={src} alt={`${title} screenshot ${idx + 1}`} onOpen={openLightbox} />)
           )}
         </div>
+      )}
+
+      {lightboxSrc && (
+        <ImageLightbox src={lightboxSrc} alt={title} onClose={closeLightbox} />
       )}
 
       {/* Related section removed as requested */}
@@ -93,10 +113,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
 
 export default ProjectDetail;
 
-const Screenshot: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
+const Screenshot: React.FC<{ src: string; alt: string; onOpen: (src: string) => void }> = ({ src, alt, onOpen }) => {
   const [isWide, setIsWide] = useState<boolean | null>(null);
   return (
-    <div className={`screenshot-item ${isWide ? 'wide' : 'tall'}`}>
+    <div
+      className={`screenshot-item ${isWide ? 'wide' : 'tall'}`}
+      role="button"
+      tabIndex={0}
+      onClick={() => onOpen(src)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onOpen(src);
+        }
+      }}
+    >
       <img
         src={src}
         alt={alt}

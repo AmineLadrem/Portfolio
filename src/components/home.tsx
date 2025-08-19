@@ -36,26 +36,32 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
           { title: 'Smart Room Service', href: '#/projects/srs', img: logoImg },
           { title: 'Lotus', href: '#/projects/lotus', img: lotusImg },
         ].map((p) => (
-          <div key={p.title} className="project-card">
-            <a
-              href={p.href}
-              className="project-visit"
-              aria-label={`Open ${p.title}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 7H17V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
+          <article
+            key={p.title}
+            className="project-card"
+            role="link"
+            tabIndex={0}
+            onClick={() => (window.location.hash = p.href)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.location.hash = p.href;
+              }
+            }}
+          >
             <div className="project-thumb">
               <img src={p.img} alt={p.title} />
+              <div className="project-visit" aria-hidden>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M8 7H17V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
             <div className="project-meta">
               <div className="project-title">{p.title}</div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
