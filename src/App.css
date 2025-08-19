@@ -73,7 +73,7 @@ html, body, #root { height: 100%; }
 }
 
 .btn:hover,
-.hero-btn:hover { background: #0f0f0f; }
+.hero-btn:hover { background: #0f0f0f; color: var(--text); }
 
 .btn:hover:not(.primary),
 .hero-btn:hover:not(.primary) { border-color: rgba(255,255,255,0.25); }
