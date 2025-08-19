@@ -1,4 +1,4 @@
-/* ---- Tokens & Resets (Universal) ---- */
+
 :root {
   --bg: #121212;
   --text: #ffffff;
@@ -27,29 +27,26 @@ body {
   min-height: 100vh;
 }
 
-/* Prevent background scroll when a modal is open */
 body.modal-open { overflow: hidden; }
 
 html, body, #root { height: 100%; }
 
-/* ---- App Layout ---- */
 .app-layout {
   display: flex;
   height: 100vh;
-  overflow: hidden; /* prevent body scrolling; only main container will scroll */
+  overflow: hidden;
 }
 
 .main-container {
   flex: 1;
   height: 100vh;
-  overflow-y: auto; /* only main content scrolls */
+  overflow-y: auto; 
   box-sizing: border-box;
   padding-left: var(--gutter-sm);
   padding-right: var(--gutter-sm);
   padding-top: 100px;
 }
 
-/* Disabled blur when overlays are open; keep scroll lock only */
 
 @media (min-width: 768px) {
   .main-container { padding-inline: var(--gutter-md); }
@@ -59,11 +56,9 @@ html, body, #root { height: 100%; }
   .main-container { padding-inline: var(--gutter-lg); }
 }
 
-/* Shared constrained section (no markup change required) */
 .hero,
 .about-container { max-width: var(--content-max); }
 
-/* ---- Primitives ---- */
 .btn,
 .hero-btn {
   font-size: 1.1rem;
@@ -80,18 +75,15 @@ html, body, #root { height: 100%; }
 .btn:hover,
 .hero-btn:hover { background: #0f0f0f; }
 
-/* Hover border color rules (global) */
 .btn:hover:not(.primary),
 .hero-btn:hover:not(.primary) { border-color: rgba(255,255,255,0.25); }
 
-/* Keep visited state consistent for buttons rendered as anchors */
 .btn:visited,
 .hero-btn:visited { color: var(--text); }
 
 .btn.primary,
 .hero-btn.primary { background: #ffffff; color: #181818; }
 
-/* Ensure white buttons keep light bg and get dark border on hover */
 .btn.primary:hover,
 .hero-btn.primary:hover { background: #ffffff; border-color: #000000; }
 
@@ -104,7 +96,6 @@ html, body, #root { height: 100%; }
   opacity: 0.7;
 }
 
-/* Fade-in animation for route/content */
 .fade-in { animation: fadeIn 600ms ease-in-out; }
 
 @keyframes fadeIn {
@@ -112,7 +103,6 @@ html, body, #root { height: 100%; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- Animations ---- */
 .page-animate > * {
   opacity: 0;
   transform: translateY(20px);
@@ -128,7 +118,6 @@ html, body, #root { height: 100%; }
 .page-animate > *:nth-child(8) { animation-delay: 760ms; }
 .page-animate .hero * { animation: none !important; opacity: unset; transform: unset; }
 
-/* Make nested children inside .page-animate participate (projects grid cards) */
 .projects-grid > * {
   opacity: 0;
   transform: translateY(16px);
@@ -138,13 +127,11 @@ html, body, #root { height: 100%; }
 .projects-grid > *:nth-child(2) { animation-delay: 180ms; }
 .projects-grid > *:nth-child(3) { animation-delay: 240ms; }
 
-/* ---- Home: Projects Template ---- */
 .projects-section { margin-top: 40px; }
 .projects-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
 .project-card { position: relative; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 .project-card { cursor: default; }
-/* Standard hand pointer on hover, applied to children too for consistency */
 .project-card:hover, .project-card:hover * { cursor: pointer; }
 .project-thumb { height: 180px; background: #111; border-bottom: 1px dashed var(--border); overflow: hidden; }
 .project-thumb img { width: 100%; height: 100%; object-fit: contain; transform: scale(1); transition: transform 350ms ease; opacity: 0.95; }
@@ -155,14 +142,12 @@ html, body, #root { height: 100%; }
 .project-title { font-weight: 600; }
 .project-tag { color: var(--muted); font-size: 0.9rem; }
 
-/* Projects page-specific adjustments */
 .projects-page .divider { margin-top: 20px; margin-bottom: 40px; }
 .projects-page .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .projects-page .project-thumb { height: 280px; }
 .projects-page .project-thumb img { object-fit: contain; transform: scale(0.94); transition: transform 300ms ease; transform-origin: center; }
 .projects-page .project-card:hover .project-thumb img { transform: scale(1.02); }
 
-/* Project detail page */
 .project-detail .project-detail-desc { color: var(--muted); max-width: 900px; }
 .project-info-panel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0 24px 0; background: var(--panel); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; }
 .project-info-item { border-right: 1px dashed var(--border); padding-inline: 12px; }
@@ -185,7 +170,6 @@ html, body, #root { height: 100%; }
 .project-detail .screenshot-item.wide { width: min(900px, 100%); }
 .project-detail .screenshot-item.tall { width: min(420px, 100%); }
 
-/* ---- Lightbox ---- */
 .lightbox-overlay {
   position: fixed;
   inset: 0;
@@ -202,9 +186,7 @@ html, body, #root { height: 100%; }
   display: grid;
   place-items: center;
 }
-/* removed toolbar per spec */
 
-/* ---- Mobile sidebar toggle ---- */
 .mobile-menu-btn {
   position: fixed;
   top: 16px;

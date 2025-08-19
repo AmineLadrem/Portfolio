@@ -31,13 +31,11 @@ function App() {
   const top = routeParts[0] || 'home';
   const sub = routeParts[1];
 
-  // Ensure new pages start at the top of the scrollable container
   useEffect(() => {
     const container = document.querySelector('.main-container') as HTMLElement | null;
     if (container) {
       container.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
-    // Fallback for any window-level scroll
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [path]);
 
@@ -54,7 +52,6 @@ function App() {
       break;
     case 'projects':
       if (sub) {
-        // Project detail routes are rendered inside Projects component based on hash
         Content = <Projects />;
       } else {
         Content = <Projects />;
@@ -90,7 +87,6 @@ function App() {
         }}
       />
       <div className="main-container" onClick={() => {
-        // Close sidebar if open when clicking main content on mobile
         document.querySelector('.sidebar')?.classList.remove('is-open');
         document.body.classList.remove('modal-open');
         document.querySelector('.sidebar-backdrop')?.classList.remove('is-open');

@@ -1,9 +1,7 @@
-/* Contact page uses global tokens from App.css */
 
 .contact { max-width: var(--content-max); margin: 0 auto; }
 .contact-header { margin-bottom: 8px; }
 
-/* Minimalist center layout */
 .minimalist-contact .contact-center {
   display: grid;
   justify-items: center;
@@ -44,7 +42,6 @@
 .icon-btn:hover { transform: scale(1.06); box-shadow: 0 6px 18px rgba(0,0,0,0.35); border-color: rgba(255,255,255,0.28); }
 .icon-btn svg { width: 20px; height: 20px; }
 
-/* Brand hover variants */
 .icon-btn.github:hover {
   background: #ffffff;
   color: #000000;

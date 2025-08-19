@@ -18,7 +18,7 @@
 
 @media (min-width: 900px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* enforce 2x2 on desktop */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
@@ -70,14 +70,12 @@
 
 .service-list li { margin: 6px 0; }
 
-/* Service buttons hover: keep same color, just darker background */
 .services-section .service-card .btn:not(.primary):hover {
   background: #0f0f0f;
   border-color: rgba(255,255,255,0.25);
   color: var(--text);
 }
 
-/* Prevent anchor visited state from turning purple */
 .services-section .service-card .btn:visited { color: var(--text); }
 
 

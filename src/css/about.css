@@ -1,10 +1,9 @@
-/* About page layout and styles matching the provided design */
 
 .about-container {
   width: 100%;
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 0 0 80px 0; /* use global gutters from .main-container */
+  padding: 0 0 80px 0;
 }
 
 .about-stats {
@@ -81,7 +80,6 @@
   .about-stats .stat + .stat { border-left: none; border-top: 1px dashed #2f2f2f; }
 }
 
-/* ---- New Sections ---- */
 .section-title { margin: 40px 0 16px 0; font-size: 1.4rem; }
 
 .exp-list { display: grid; gap: 18px; }
@@ -100,12 +98,10 @@
 .edu-item { padding: 10px 0; border-bottom: 1px dashed var(--border); }
 .edu-degree { font-weight: 500; }
 
-/* Slightly thinner section titles for Work and Education only */
 .experience-section .section-title,
 .education-section .section-title { font-weight: 500; }
 .edu-meta { color: var(--muted); font-size: 0.95rem; }
 
-/* ---- Stack By Category ---- */
 .stack-by-category { display: grid; gap: 14px; }
 
 .stack-categories {
@@ -127,7 +123,6 @@
 .category-btn:hover { border-color: #4c4c4c; }
 .category-btn.is-active { border-color: #6b6b6b; background: #101010; }
 
-/* Popout */
 .stack-popout { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; }
 
 .stack-popout-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(2px); }

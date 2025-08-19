@@ -106,7 +106,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         <ImageLightbox src={lightboxSrc} alt={title} onClose={closeLightbox} />
       )}
 
-      {/* Related section removed as requested */}
+      { }
     </section>
   );
 };

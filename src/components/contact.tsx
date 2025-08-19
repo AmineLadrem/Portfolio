@@ -11,14 +11,25 @@ const Contact: React.FC = () => {
       <hr className="divider" />
 
       <div className="contact-center">
-        <a
-          href="mailto:contact.amineladrem@gmail.com"
-          className="cta-email"
-          aria-label="Send me an email"
-        >
-          <FiMail />
-          <span>Send me an Email</span>
-        </a>
+        <div className="hero-actions">
+          <a
+            href="mailto:contact.amineladrem@gmail.com"
+            className="cta-email"
+            aria-label="Send me an email"
+          >
+            <FiMail />
+            <span>Send me an Email</span>
+          </a>
+
+          <a
+            className="cta-email"
+            href={new URL('../assets/CV.pdf', import.meta.url).href}
+            download
+            aria-label="Download my CV"
+          >
+            <span>Download CV</span>
+          </a>
+        </div>
 
         <div className="social-icons" aria-label="Follow me on social media">
           <a className="icon-btn github" href="https://github.com/AmineLadrem" aria-label="GitHub" target="_blank" rel="noreferrer noopener">

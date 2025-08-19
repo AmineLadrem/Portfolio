@@ -44,7 +44,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ src, alt = '', onClose })
   };
 
   const onMouseDown: React.MouseEventHandler<HTMLDivElement> = (e) => {
-    if (scale <= 1) return; // no pan if not zoomed
+    if (scale <= 1) return; 
     setIsDragging(true);
     lastPointRef.current = { x: e.clientX, y: e.clientY };
   };

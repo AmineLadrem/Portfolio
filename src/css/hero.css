@@ -105,10 +105,10 @@
   gap: 18px;
 }
 
-.hero-btn { /* uses universal .hero-btn/.btn styles from App.css */ }
+.hero-btn { }
 
 .hero-separator {
-  /* base divider styles come from App.css (.divider, .hero-separator) */
+
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 600ms ease-out forwards;

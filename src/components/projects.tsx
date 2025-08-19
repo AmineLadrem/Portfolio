@@ -38,7 +38,6 @@ const detailMap: Record<string, DetailRenderer> = {
 const Projects: React.FC = () => {
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
-  // Sync with hash for detail pages
   useEffect(() => {
     const syncFromHash = () => {
       const hash = window.location.hash;

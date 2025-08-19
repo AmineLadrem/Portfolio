@@ -19,6 +19,13 @@ const Home = ({ onSelect }: { onSelect: (key: string) => void }) => (
       <div className="hero-actions">
         <button className="hero-btn primary" onClick={() => onSelect('contact')}>Get In Touch</button>
         <button className="hero-btn" onClick={() => onSelect('about')}>About Me</button>
+        <a
+          className="hero-btn"
+          href={new URL('../assets/CV.pdf', import.meta.url).href}
+          download
+        >
+          Download CV
+        </a>
       </div>
     </section>
   <div className="page-animate">
